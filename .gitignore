@@ -1,0 +1,111 @@
+# --- Python ---
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.env*/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# --- Frontend ---
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Frontend build files
+dist/
+build/
+staticfiles/
+
+# --- Database ---
+# SQLite
+*.sqlite3
+*.db
+
+# --- Logs ---
+*.log
+logs/
+
+# --- System ---
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Miscellaneous ---
+# Secrets
+secrets.py
+.env
+.env.local
+.env.development
+.env.production
+
+# Backup files
+*.bak
+*.swp
+*.swo
+
+# Temp files
+*.tmp
+*.temp
+
+# IDE-specific files
+.idea/
+*.swp
+*.swo
