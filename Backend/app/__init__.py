@@ -10,3 +10,6 @@ def home():
 
 if __name__ == "__main__":  
     app.run(debug=True)
+
+# Import routes after creating the app to avoid circular imports
+from . import routes
