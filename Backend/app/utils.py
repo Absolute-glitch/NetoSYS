@@ -8,3 +8,4 @@ def capture_packets(count=20):
     """
     packets = sniff(count=count)
     return packets
+
