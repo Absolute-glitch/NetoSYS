@@ -1,8 +1,21 @@
 from flask import jsonify
-from . utils import capture_packets
+from .utils import capture_packets
+import os
 
-@app.route('/capture')
-def capture():
-    packets = capture_packets()
-    return jsonify({"message": f"Captured {len(packets)} packets"})
-from . import app  # Relative import for the app object
+def setup_routes(app):
+    @app.route("/capture", methods=["GET"])
+    def capture():
+        """
+        API endpoint to trigger packet capture.
+        """
+        try:
+            # Capture 10 packets and save them to a file
+            output_file = capture_packets(packet_count=10, output_file="captured_packets.pcap")
+
+            # Check if the file was created
+            if os.path.exists(output_file):
+                return jsonify({"status": "success", "message": "Packets captured and saved successfully.", "file": output_file})
+            else:
+                return jsonify({"status": "error", "message": "Failed to capture packets."}), 500
+        except Exception as e:
+            return jsonify({"status": "error", "message": str(e)}), 500

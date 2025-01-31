@@ -1,10 +1,6 @@
-import sys
-import os
+from app import create_app
 
-# Add the project root directory to the Python path
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+app = create_app()
 
-from Backend.app import app
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
