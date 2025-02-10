@@ -4,7 +4,7 @@ def create_app():
     app = Flask(__name__)
 
     # Import and register routes
-    from . routes import setup_routes
+    from .routes import setup_routes
     setup_routes(app)
 
     return app
